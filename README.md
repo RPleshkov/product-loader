@@ -1,6 +1,6 @@
 # 🚀 Product-Loader Project Setup
 
-Проект использует [FastStream](https://faststream.dev/), [Docker](https://www.docker.com/), и [uv](https://astral.sh/blog/uv-fast-python-installs/) — быстрый менеджер зависимостей и Python-окружений.
+Проект использует [FastStream](https://faststream.airt.ai/latest/), [Docker](https://www.docker.com/), и [uv](https://docs.astral.sh/uv/) — быстрый менеджер зависимостей и Python-окружений.
 
 ## 📦 Установка
 
