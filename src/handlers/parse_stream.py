@@ -3,6 +3,7 @@ from faststream.nats import NatsRouter, PullSub
 from sqlalchemy import insert
 from sqlalchemy.exc import IntegrityError, SQLAlchemyError
 
+from src.config import settings
 from src.database.models import OtherInfo, Product
 from src.database.session import session_factory
 from src.schemas import ProductSchema
@@ -11,9 +12,9 @@ router = NatsRouter()
 
 
 @router.subscriber(
-    durable="TEST_STREAM",
-    stream="TEST_STREAM",
-    subject="TEST_STREAM",
+    durable=settings.nats.durable_name,
+    stream=settings.nats.stream_name,
+    subject=settings.nats.subject_name,
     pull_sub=PullSub(batch_size=20, timeout=10),
 )
 async def message_handler(

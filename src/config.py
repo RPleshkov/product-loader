@@ -49,6 +49,9 @@ class NatsConfig:
     host: str = env("NATS_HOST")
     port: int = env.int("NATS_PORT")
     token: str = env("NATS_TOKEN")
+    stream_name: str = env("NATS_STREAM_NAME")
+    subject_name: str = env("NATS_SUBJECT_NAME")
+    durable_name: str = env("NATS_DURABLE_NAME")
 
     @property
     def get_url(self):
